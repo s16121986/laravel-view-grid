@@ -2,15 +2,17 @@
 
 namespace Gsdk\Grid\Column;
 
-class Url extends AbstractColumn {
+use Gsdk\Grid\Support\AbstractColumn;
 
-	protected $_options = [
-		//'href' => '%value%',
-		'target' => ''
-	];
+class Url extends AbstractColumn
+{
+    protected $_options = [
+        //'href' => '%value%',
+        'target' => ''
+    ];
 
-	protected function init() {
-		$this->setOption('href', '%' . $this->name . '%');
-	}
-
+    protected function init()
+    {
+        $this->setOption('href', '%' . $this->name . '%');
+    }
 }

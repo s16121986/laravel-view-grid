@@ -1,6 +1,10 @@
 <?php
+
 namespace Gsdk\Grid\Column;
 
-class Text extends AbstractColumn{
+use Gsdk\Grid\Support\AbstractColumn;
+
+class Text extends AbstractColumn
+{
 
 }

@@ -1,10 +1,12 @@
 <?php
+
 namespace Gsdk\Grid\Column;
 
-class Phone extends AbstractColumn{
+use Gsdk\Grid\Support\AbstractColumn;
 
-	protected $_options = array(
-		'href' => 'tel:%value%'
-	);
-
+class Phone extends AbstractColumn
+{
+    protected $_options = [
+        'href' => 'tel:%value%'
+    ];
 }

@@ -1,6 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Column;
+namespace Gsdk\Grid\Support;
+
+use Gsdk\Grid\Column\ColumnInterface;
 
 abstract class AbstractColumn implements ColumnInterface
 {

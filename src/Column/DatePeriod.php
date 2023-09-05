@@ -3,6 +3,7 @@
 namespace Gsdk\Grid\Column;
 
 use Carbon\CarbonPeriod;
+use Gsdk\Grid\Support\AbstractColumn;
 
 class DatePeriod extends AbstractColumn
 {

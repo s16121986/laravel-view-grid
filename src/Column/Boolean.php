@@ -2,18 +2,20 @@
 
 namespace Gsdk\Grid\Column;
 
-class Boolean extends AbstractColumn {
+use Gsdk\Grid\Support\AbstractColumn;
 
-	protected array $options = [
-		'trueText' => 'да',
-		'falseText' => 'нет'
-	];
+class Boolean extends AbstractColumn
+{
+    protected array $options = [
+        'trueText' => 'да',
+        'falseText' => 'нет'
+    ];
 
-	public function formatValue($value, $row = null) {
-		$value = (bool)$value;
-		$flagText = ($value ? $this->trueText : $this->falseText);
+    public function formatValue($value, $row = null)
+    {
+        $value = (bool)$value;
+        $flagText = ($value ? $this->trueText : $this->falseText);
 
-		return '<span class="boolean-' . ($value ? 'true' : 'false') . '">' . $flagText . '</span>';
-	}
-
+        return '<span class="boolean-' . ($value ? 'true' : 'false') . '">' . $flagText . '</span>';
+    }
 }
