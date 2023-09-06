@@ -1,9 +1,9 @@
 <?php
 
-namespace Gsdk\Grid\Renderer;
+namespace Sdk\Grid\Renderer;
 
-use Gsdk\Grid\Column\ColumnInterface;
-use Gsdk\Grid\Grid;
+use Sdk\Grid\Column\ColumnInterface;
+use Sdk\Grid\Grid;
 
 class ColumnRenderer
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Gsdk\Grid\Data;
+namespace Sdk\Grid\Data;
 
-use Gsdk\Grid\Support\Sorting;
-use Gsdk\Grid\Paginator;
+use Sdk\Grid\Support\Sorting;
+use Sdk\Grid\Paginator;
 
 class IterableData implements DataInterface
 {

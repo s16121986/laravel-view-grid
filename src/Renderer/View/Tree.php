@@ -1,9 +1,9 @@
 <?php
 
-namespace Gsdk\Grid\Renderer\View;
+namespace Sdk\Grid\Renderer\View;
 
-use Gsdk\Grid\Grid;
-use Gsdk\Grid\Renderer\ColumnRenderer;
+use Sdk\Grid\Grid;
+use Sdk\Grid\Renderer\ColumnRenderer;
 
 class Tree extends Table
 {

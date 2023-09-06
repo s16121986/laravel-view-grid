@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Data;
+namespace Sdk\Grid\Data;
 
 class DataFactory
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Concerns;
+namespace Sdk\Grid\Concerns;
 
 trait HasExtensions
 {
@@ -37,7 +37,7 @@ trait HasExtensions
             }
 
             if (null === $class) {
-                $class = 'Gsdk\Grid\Column\\' . ucfirst($type);
+                $class = 'Sdk\Grid\Column\\' . ucfirst($type);
             }
         }
 

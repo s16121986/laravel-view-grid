@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid;
+namespace Sdk\Grid;
 
 use Illuminate\Support\Facades\Request;
 

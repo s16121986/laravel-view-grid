@@ -1,8 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Renderer;
+namespace Sdk\Grid\Renderer;
 
-use Gsdk\Grid\Grid;
+use Sdk\Grid\Grid;
 
 class Renderer
 {

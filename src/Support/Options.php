@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Support;
+namespace Sdk\Grid\Support;
 
 class Options
 {

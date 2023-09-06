@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid;
+namespace Sdk\Grid;
 
 /**
  * @method static data(mixed $data)
