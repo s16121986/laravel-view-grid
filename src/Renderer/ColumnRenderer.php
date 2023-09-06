@@ -3,12 +3,12 @@
 namespace Sdk\Grid\Renderer;
 
 use Sdk\Grid\Column\ColumnInterface;
-use Sdk\Grid\Grid;
+use Sdk\Grid\GridBuilder;
 
 class ColumnRenderer
 {
     public function __construct(
-        private readonly Grid $grid,
+        private readonly GridBuilder $grid,
         private readonly ColumnInterface $column
     ) {
     }

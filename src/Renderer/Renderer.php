@@ -2,7 +2,7 @@
 
 namespace Sdk\Grid\Renderer;
 
-use Sdk\Grid\Grid;
+use Sdk\Grid\GridBuilder;
 
 class Renderer
 {
@@ -19,7 +19,7 @@ class Renderer
         }
     }
 
-    public function render(Grid $grid): string
+    public function render(GridBuilder $grid): string
     {
         return $this->view->render($grid);
     }

@@ -2,7 +2,7 @@
 
 namespace Sdk\Grid\Renderer\View;
 
-use Sdk\Grid\Grid;
+use Sdk\Grid\GridBuilder;
 use Sdk\Grid\Renderer\ColumnRenderer;
 
 class Tree extends Table
@@ -22,7 +22,7 @@ class Tree extends Table
         $this->indentColumn = $params['indentColumn'] ?? 'name';
     }
 
-    protected function renderTBody(Grid $grid): string
+    protected function renderTBody(GridBuilder $grid): string
     {
         $html = '<tbody>';
         $html .= $this->tree($grid, null);
@@ -30,7 +30,7 @@ class Tree extends Table
         return $html;
     }
 
-    private function tree(Grid $grid, $parentId, $level = 0): string
+    private function tree(GridBuilder $grid, $parentId, $level = 0): string
     {
         $html = '';
 

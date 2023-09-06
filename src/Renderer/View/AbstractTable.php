@@ -2,11 +2,11 @@
 
 namespace Sdk\Grid\Renderer\View;
 
-use Sdk\Grid\Grid;
+use Sdk\Grid\GridBuilder;
 
 abstract class AbstractTable
 {
-    public function render(Grid $grid): string
+    public function render(GridBuilder $grid): string
     {
         if ($grid->getData()->isEmpty()) {
             return '<div class="grid-empty-text">' . $grid->getOption('emptyText') . '</div>';
@@ -49,5 +49,5 @@ abstract class AbstractTable
         return $features;
     }
 
-    abstract protected function renderTable(Grid $grid): string;
+    abstract protected function renderTable(GridBuilder $grid): string;
 }

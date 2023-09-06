@@ -2,12 +2,12 @@
 
 namespace Sdk\Grid\Renderer\View;
 
-use Sdk\Grid\Grid;
+use Sdk\Grid\GridBuilder;
 use Sdk\Grid\Renderer\ColumnRenderer;
 
 class Table extends AbstractTable
 {
-    protected function renderTable(Grid $grid): string
+    protected function renderTable(GridBuilder $grid): string
     {
         $html = '<table' . $this->tableAttributes($grid) . '>';
 
@@ -24,7 +24,7 @@ class Table extends AbstractTable
         return $html;
     }
 
-    protected function renderTHead(Grid $grid): string
+    protected function renderTHead(GridBuilder $grid): string
     {
         $html = '<thead>';
         $html .= '<tr>';
@@ -39,7 +39,7 @@ class Table extends AbstractTable
         return $html;
     }
 
-    protected function renderTBody(Grid $grid): string
+    protected function renderTBody(GridBuilder $grid): string
     {
         $html = '<tbody>';
         foreach ($grid->getData()->get() as $row) {
@@ -54,14 +54,14 @@ class Table extends AbstractTable
         return $html;
     }
 
-    protected function renderTFoot(Grid $grid): string
+    protected function renderTFoot(GridBuilder $grid): string
     {
         $html = '';
 
         return ($html ? '<tfoot>' . $html . '</tfoot>' : '');
     }
 
-    private function tableAttributes(Grid $grid): string
+    private function tableAttributes(GridBuilder $grid): string
     {
         $attributes = '';
         foreach (['id', 'class'] as $k) {
