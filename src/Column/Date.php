@@ -12,6 +12,10 @@ class Date extends AbstractColumn
 
     public function formatValue($value, $row = null)
     {
-        return parent::formatValue(app('format')->date($value, $this->format), $row);
+        if (!$value instanceof \DateTimeInterface) {
+            $value = new \DateTime($value);
+        }
+
+        return parent::formatValue($value->format($this->format), $row);
     }
 }

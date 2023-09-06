@@ -7,7 +7,9 @@ use Sdk\Grid\Support\AbstractColumn;
 class Number extends AbstractColumn
 {
     protected array $options = [
-        'format' => 'NFD=2;NDS=,;NGS= '
+        'decimals' => 0,
+        'decimalSeparator' => ',',
+        'thousandsSeparator' => ' ',
     ];
 
     public function prepareValue($value)
@@ -21,7 +23,9 @@ class Number extends AbstractColumn
 
     public function formatValue($value, $row = null)
     {
-        return ($this->format ? app('format')->number($value, $this->format) : $value);
+        return $this->format
+            ? ($this->format)($value, $row)
+            : number_format($value, $this->decimals, $this->decimalSeparator, $this->thousandsSeparator);
     }
 
     private static function isNullValue($value): bool
