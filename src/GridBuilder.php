@@ -1,6 +1,6 @@
 <?php
 
-namespace Sdk\Grid;
+namespace Gsdk\Grid;
 
 /**
  * @method $this boolean(string $name, array $options = [])

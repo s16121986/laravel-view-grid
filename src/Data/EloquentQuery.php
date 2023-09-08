@@ -1,12 +1,12 @@
 <?php
 
-namespace Sdk\Grid\Data;
+namespace Gsdk\Grid\Data;
 
-use Sdk\Grid\Support\Sorting;
+use Gsdk\Grid\Support\Sorting;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\Relation;
-use Sdk\Grid\Paginator;
+use Gsdk\Grid\Paginator;
 
 class EloquentQuery implements DataInterface
 {

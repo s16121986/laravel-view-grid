@@ -1,9 +1,9 @@
 <?php
 
-namespace Sdk\Grid\Renderer\View;
+namespace Gsdk\Grid\Renderer\View;
 
-use Sdk\Grid\GridBuilder;
-use Sdk\Grid\Renderer\ColumnRenderer;
+use Gsdk\Grid\GridBuilder;
+use Gsdk\Grid\Renderer\ColumnRenderer;
 
 class Table extends AbstractTable
 {

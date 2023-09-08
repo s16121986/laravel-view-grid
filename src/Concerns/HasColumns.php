@@ -1,8 +1,8 @@
 <?php
 
-namespace Sdk\Grid\Concerns;
+namespace Gsdk\Grid\Concerns;
 
-use Sdk\Grid\Column\ColumnInterface;
+use Gsdk\Grid\Column\ColumnInterface;
 
 trait HasColumns
 {

@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Sdk\\Grid\\": "src"
+      "Gsdk\\Grid\\": "src"
     }
   },
   "minimum-stability": "stable"

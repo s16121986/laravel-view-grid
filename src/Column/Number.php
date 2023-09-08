@@ -1,8 +1,8 @@
 <?php
 
-namespace Sdk\Grid\Column;
+namespace Gsdk\Grid\Column;
 
-use Sdk\Grid\Support\AbstractColumn;
+use Gsdk\Grid\Support\AbstractColumn;
 
 class Number extends AbstractColumn
 {
@@ -10,6 +10,7 @@ class Number extends AbstractColumn
         'decimals' => 0,
         'decimalSeparator' => ',',
         'thousandsSeparator' => ' ',
+        'zerofill' => false,
     ];
 
     public function prepareValue($value)

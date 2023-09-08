@@ -1,8 +1,8 @@
 <?php
 
-namespace Sdk\Grid\Feature;
+namespace Gsdk\Grid\Feature;
 
-use Sdk\Grid\GridBuilder;
+use Gsdk\Grid\GridBuilder;
 
 abstract class AbstractFeature {
 

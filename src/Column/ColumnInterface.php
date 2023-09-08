@@ -1,6 +1,6 @@
 <?php
 
-namespace Sdk\Grid\Column;
+namespace Gsdk\Grid\Column;
 
 interface ColumnInterface {
 

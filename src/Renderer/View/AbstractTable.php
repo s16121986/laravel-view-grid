@@ -1,8 +1,8 @@
 <?php
 
-namespace Sdk\Grid\Renderer\View;
+namespace Gsdk\Grid\Renderer\View;
 
-use Sdk\Grid\GridBuilder;
+use Gsdk\Grid\GridBuilder;
 
 abstract class AbstractTable
 {
@@ -38,7 +38,7 @@ abstract class AbstractTable
                 throw new \Exception('Invalid feature');
             }
 
-            $cls = 'Sdk\Grid\Feature\\' . ucfirst($name);
+            $cls = 'Gsdk\Grid\Feature\\' . ucfirst($name);
             if (!class_exists($cls, true)) {
                 throw new \Exception('Feature not exists');
             }

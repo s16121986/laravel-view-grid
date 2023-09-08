@@ -1,9 +1,9 @@
 <?php
 
-namespace Sdk\Grid\Column;
+namespace Gsdk\Grid\Column;
 
 use Carbon\CarbonPeriod;
-use Sdk\Grid\Support\AbstractColumn;
+use Gsdk\Grid\Support\AbstractColumn;
 
 class DatePeriod extends AbstractColumn
 {
