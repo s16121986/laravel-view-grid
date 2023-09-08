@@ -2,7 +2,7 @@
   "name": "gsdk/grid",
   "type": "library",
   "description": "Allows detect client timezone from cookies",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "keywords": [
     "gsdk",
     "meta"
