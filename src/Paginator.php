@@ -4,6 +4,9 @@ namespace Gsdk\Grid;
 
 use Illuminate\Support\Facades\Request;
 
+/**
+ * @property int $step
+ */
 class Paginator
 {
     protected static array $defaultOptions = [
@@ -91,6 +94,11 @@ class Paginator
         return ($this->getCurrentPage() - 1) * $this->step;
     }
 
+    public function getStep(): int
+    {
+        return $this->step;
+    }
+
     public function getStartIndex(): int
     {
         return $this->getOffset();
@@ -102,16 +110,12 @@ class Paginator
             return $this->current;
         }
 
-        $this->current = (int)$this->getQuery($this->queryParam);
-        if ($this->current > $this->getPageCount()) {
-            $this->current = $this->getPageCount();
-        } else {
-            if ($this->current < 1) {
-                $this->current = 1;
-            }
+        $current = (int)$this->getQuery($this->queryParam);
+        if ($current < 1) {
+            $current = 1;
         }
 
-        return $this->current;
+        return $this->current = $current;
     }
 
     public function getPageCount(): int

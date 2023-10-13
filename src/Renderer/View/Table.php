@@ -43,7 +43,7 @@ class Table extends AbstractTable
     {
         $html = '<tbody>';
         foreach ($grid->getData()->get() as $row) {
-            $html .= '<tr' . ($row?->id ? ' data-id="' . $row->id . '"' : '') . '>';
+            $html .= '<tr' . (isset($row->id) ? ' data-id="' . $row->id . '"' : '') . '>';
             foreach ($grid->getColumns() as $column) {
                 $html .= (new ColumnRenderer($grid, $column))->td($row);
             }
