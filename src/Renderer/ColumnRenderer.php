@@ -44,6 +44,7 @@ class ColumnRenderer
         //$dataValue = isset($row->{$column->name}) ? $row->{$column->name} : null;
         $html .= $this->text($row);
         $html .= '</td>';
+
         return $html;
     }
 
@@ -57,10 +58,8 @@ class ColumnRenderer
         } elseif ($column->renderer) {
             $columnValue = call_user_func_array(
                 $column->renderer,
-                [$row, $column->formatValue($dataValue, $row), $column->params]
+                [$row, $column->formatValue($dataValue, $row), $column]
             );
-        } elseif (method_exists($column, 'renderer')) {
-            $columnValue = call_user_func_array([$column, 'renderer'], [$row, $dataValue, $column->params]);
         } else {
             $columnValue = $column->formatValue($dataValue, $row);
         }
@@ -75,11 +74,13 @@ class ColumnRenderer
             } else {
                 $href = route($column->route, $row->id);
             }
+
             return '<a href="' . $href . '"' . ($column->hrefTarget ? ' target="' . $column->hrefTarget . '"' : '') . '>' . $columnValue . '</a>';
         } elseif ($column->href) {
             $href = preg_replace_callback('/{(.+)}/', function ($m) use ($row) {
                 return $row->{$m[1]} ?? '';
             }, $column->href);
+
             return '<a href="' . $href . '"' . ($column->hrefTarget ? ' target="' . $column->hrefTarget . '"' : '') . '>' . $columnValue . '</a>';
         }
 
