@@ -24,7 +24,7 @@ class Number extends AbstractColumn
 
     public function formatValue($value, $row = null)
     {
-        return $this->format
+        return ($this->format && is_callable($this->format))
             ? ($this->format)($value, $row)
             : number_format($value, $this->decimals, $this->decimalSeparator, $this->thousandsSeparator);
     }
