@@ -129,14 +129,14 @@ class GridBuilder
         return $this->renderer->render($this);
     }
 
-    public function rendering(\Closure $callback): void
+    public function rendering(\Closure $callback): static
     {
-        $this->bindCallback(__FUNCTION__, $callback);
+        return $this->bindCallback(__FUNCTION__, $callback);
     }
 
-    public function queried(\Closure $callback): void
+    public function queried(\Closure $callback): static
     {
-        $this->bindCallback(__FUNCTION__, $callback);
+        return $this->bindCallback(__FUNCTION__, $callback);
     }
 
     public function __toString(): string
@@ -161,12 +161,14 @@ class GridBuilder
     {
     }
 
-    protected function bindCallback(string $group, \Closure $callback): void
+    protected function bindCallback(string $group, \Closure $callback): static
     {
         if (!isset($this->callbacks[$group])) {
             $this->callbacks[$group] = [];
         }
         $this->callbacks[$group][] = $callback;
+
+        return $this;
     }
 
     protected function fireCallbacks(string $group): void
