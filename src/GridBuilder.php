@@ -30,6 +30,8 @@ class GridBuilder
 
     protected ?Paginator $paginator = null;
 
+    protected array $callbacks = [];
+
     protected static array $defaultOptions = [];
 
     public static function setDefaults(array $options): void
@@ -122,7 +124,19 @@ class GridBuilder
     {
         $this->prepareData();
 
+        $this->fireCallbacks('rendering');
+
         return $this->renderer->render($this);
+    }
+
+    public function rendering(\Closure $callback): void
+    {
+        $this->bindCallback(__FUNCTION__, $callback);
+    }
+
+    public function queried(\Closure $callback): void
+    {
+        $this->bindCallback(__FUNCTION__, $callback);
     }
 
     public function __toString(): string
@@ -139,9 +153,28 @@ class GridBuilder
         $this->sorting->fromRequest();
 
         $this->data->sorting($this->sorting);
+
+        $this->fireCallbacks('queried');
     }
 
     protected function build(): void
     {
+    }
+
+    protected function bindCallback(string $group, \Closure $callback): void
+    {
+        if (!isset($this->callbacks[$group])) {
+            $this->callbacks[$group] = [];
+        }
+        $this->callbacks[$group][] = $callback;
+    }
+
+    protected function fireCallbacks(string $group): void
+    {
+        if (isset($this->callbacks[$group])) {
+            foreach ($this->callbacks[$group] as $cb) {
+                $cb($this);
+            }
+        }
     }
 }
