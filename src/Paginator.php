@@ -205,13 +205,8 @@ class Paginator
 
     public function render($view = null)
     {
-        $pages = $this->getPages();
-        if (!$pages) {
-            return '';
-        }
-
         return view($view ?? $this->view, [
-            'pages' => $pages,
+            'pages' => $this->getPages(),
             'paginator' => $this
         ]);
     }
