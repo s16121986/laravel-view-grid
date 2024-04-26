@@ -148,12 +148,9 @@ class Paginator
         return '<a class="' . $class . '" href="' . $url . '">' . $text . '</a>';
     }
 
-    private function getPages(): ?\stdClass
+    private function getPages(): \stdClass
     {
         $pageCount = $this->getPageCount();
-        if ($pageCount <= 1) {
-            return null;
-        }
 
         $pages = new \stdClass();
         $pages->count = $this->count;
@@ -163,6 +160,12 @@ class Paginator
         $pages->last = $pageCount;
         $pages->previous = null;
         $pages->next = null;
+        $pages->pagesInRange = [];
+        $pages->firstPageInRange = 0;
+        $pages->lastPageInRange = 0;
+        if ($pageCount <= 1) {
+            return $pages;
+        }
 
         if ($pages->current - 1 > 0) {
             $pages->previous = $pages->current - 1;
