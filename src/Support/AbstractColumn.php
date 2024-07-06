@@ -1,8 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Support;
+namespace LaravelViewGrid\Support;
 
-use Gsdk\Grid\Column\ColumnInterface;
+use LaravelViewGrid\Column\ColumnInterface;
 
 abstract class AbstractColumn implements ColumnInterface
 {

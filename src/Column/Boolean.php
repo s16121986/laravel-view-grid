@@ -1,8 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Column;
+namespace LaravelViewGrid\Column;
 
-use Gsdk\Grid\Support\AbstractColumn;
+use LaravelViewGrid\Support\AbstractColumn;
 
 class Boolean extends AbstractColumn
 {

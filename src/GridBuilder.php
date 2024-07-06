@@ -1,6 +1,8 @@
 <?php
 
-namespace Gsdk\Grid;
+namespace LaravelViewGrid;
+
+use Closure;
 
 /**
  * @method $this boolean(string $name, array $options = [])
@@ -129,12 +131,12 @@ class GridBuilder
         return $this->renderer->render($this);
     }
 
-    public function rendering(\Closure $callback): static
+    public function rendering(Closure $callback): static
     {
         return $this->bindCallback(__FUNCTION__, $callback);
     }
 
-    public function queried(\Closure $callback): static
+    public function queried(Closure $callback): static
     {
         return $this->bindCallback(__FUNCTION__, $callback);
     }
@@ -161,7 +163,7 @@ class GridBuilder
     {
     }
 
-    protected function bindCallback(string $group, \Closure $callback): static
+    protected function bindCallback(string $group, Closure $callback): static
     {
         if (!isset($this->callbacks[$group])) {
             $this->callbacks[$group] = [];

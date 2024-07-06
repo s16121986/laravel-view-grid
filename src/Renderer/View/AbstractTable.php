@@ -1,8 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Renderer\View;
+namespace LaravelViewGrid\Renderer\View;
 
-use Gsdk\Grid\GridBuilder;
+use LaravelViewGrid\GridBuilder;
 
 abstract class AbstractTable
 {
@@ -38,7 +38,7 @@ abstract class AbstractTable
                 throw new \Exception('Invalid feature');
             }
 
-            $cls = 'Gsdk\Grid\Feature\\' . ucfirst($name);
+            $cls = 'LaravelViewGrid\Feature\\' . ucfirst($name);
             if (!class_exists($cls, true)) {
                 throw new \Exception('Feature not exists');
             }

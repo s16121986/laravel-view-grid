@@ -1,9 +1,9 @@
 <?php
 
-namespace Gsdk\Grid\Data;
+namespace LaravelViewGrid\Data;
 
-use Gsdk\Grid\Support\Sorting;
-use Gsdk\Grid\Paginator;
+use LaravelViewGrid\Support\Sorting;
+use LaravelViewGrid\Paginator;
 
 class IterableData implements DataInterface
 {

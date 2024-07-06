@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Support;
+namespace LaravelViewGrid\Support;
 
 use Illuminate\Support\Facades\Request;
 

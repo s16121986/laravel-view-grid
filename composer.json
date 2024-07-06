@@ -1,12 +1,8 @@
 {
-  "name": "gsdk/grid",
+  "name": "gsdk/laravel-view-grid",
   "type": "library",
-  "description": "Allows detect client timezone from cookies",
+  "description": "",
   "version": "1.0.15",
-  "keywords": [
-    "gsdk",
-    "meta"
-  ],
   "license": "MIT",
   "authors": [
     {
@@ -17,13 +13,9 @@
   "require": {
     "php": ">=8.1.0"
   },
-  "require-dev": {
-  },
-  "conflict": {
-  },
   "autoload": {
     "psr-4": {
-      "Gsdk\\Grid\\": "src"
+      "LaravelViewGrid\\": "src"
     }
   },
   "minimum-stability": "stable"

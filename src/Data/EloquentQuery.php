@@ -1,12 +1,12 @@
 <?php
 
-namespace Gsdk\Grid\Data;
+namespace LaravelViewGrid\Data;
 
-use Gsdk\Grid\Support\Sorting;
+use LaravelViewGrid\Support\Sorting;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\Relation;
-use Gsdk\Grid\Paginator;
+use LaravelViewGrid\Paginator;
 
 class EloquentQuery implements DataInterface
 {

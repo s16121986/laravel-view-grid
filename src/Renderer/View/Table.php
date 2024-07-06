@@ -1,9 +1,9 @@
 <?php
 
-namespace Gsdk\Grid\Renderer\View;
+namespace LaravelViewGrid\Renderer\View;
 
-use Gsdk\Grid\GridBuilder;
-use Gsdk\Grid\Renderer\ColumnRenderer;
+use LaravelViewGrid\GridBuilder;
+use LaravelViewGrid\Renderer\ColumnRenderer;
 
 class Table extends AbstractTable
 {

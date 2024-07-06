@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Concerns;
+namespace LaravelViewGrid\Concerns;
 
 trait HasExtensions
 {
@@ -37,7 +37,7 @@ trait HasExtensions
             }
 
             if (null === $class) {
-                $class = 'Gsdk\Grid\Column\\' . ucfirst($type);
+                $class = 'LaravelViewGrid\Column\\' . ucfirst($type);
             }
         }
 

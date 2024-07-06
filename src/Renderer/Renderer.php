@@ -1,8 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Renderer;
+namespace LaravelViewGrid\Renderer;
 
-use Gsdk\Grid\GridBuilder;
+use LaravelViewGrid\GridBuilder;
 
 class Renderer
 {

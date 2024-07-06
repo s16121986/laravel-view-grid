@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Column;
+namespace LaravelViewGrid\Column;
 
 use Closure;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Feature;
+namespace LaravelViewGrid\Feature;
 
-use Gsdk\Grid\GridBuilder;
+use LaravelViewGrid\GridBuilder;
 
 abstract class AbstractFeature {
 

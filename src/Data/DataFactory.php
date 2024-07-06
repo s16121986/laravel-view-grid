@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Data;
+namespace LaravelViewGrid\Data;
 
 class DataFactory
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Gsdk\Grid\Renderer;
+namespace LaravelViewGrid\Renderer;
 
-use Gsdk\Grid\Column\ColumnInterface;
-use Gsdk\Grid\GridBuilder;
+use LaravelViewGrid\Column\ColumnInterface;
+use LaravelViewGrid\GridBuilder;
 
 class ColumnRenderer
 {

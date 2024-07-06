@@ -1,6 +1,6 @@
 <?php
 
-namespace Gsdk\Grid\Feature;
+namespace LaravelViewGrid\Feature;
 
 class Summary extends AbstractFeature {
 

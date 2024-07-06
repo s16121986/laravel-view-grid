@@ -1,8 +1,8 @@
 <?php
 
-namespace Gsdk\Grid\Concerns;
+namespace LaravelViewGrid\Concerns;
 
-use Gsdk\Grid\Column\ColumnInterface;
+use LaravelViewGrid\Column\ColumnInterface;
 
 trait HasColumns
 {

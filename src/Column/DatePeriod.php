@@ -1,9 +1,9 @@
 <?php
 
-namespace Gsdk\Grid\Column;
+namespace LaravelViewGrid\Column;
 
 use Carbon\CarbonPeriod;
-use Gsdk\Grid\Support\AbstractColumn;
+use LaravelViewGrid\Support\AbstractColumn;
 
 class DatePeriod extends AbstractColumn
 {
